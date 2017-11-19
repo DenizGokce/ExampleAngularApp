@@ -1,10 +1,11 @@
 {
-  "name": "angular-seed",
-  "private": true,
-  "version": "0.0.0",
-  "description": "A starter project for AngularJS",
-  "repository": "https://github.com/angular/angular-seed",
-  "license": "MIT",
+  "name": "ExampleAngularApp",
+  "version": "1.0.0",
+  "description": "Example SPA WebProject in AngularJS",
+  "engines": {
+    "node": "6.10.3",
+    "npm": "5.5.1"
+  },
   "devDependencies": {
     "bower": "^1.7.7",
     "http-server": "^0.9.0",
