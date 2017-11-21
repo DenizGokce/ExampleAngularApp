@@ -6,5 +6,7 @@ angular.module('app', [
     'app.404',
     'app.home',
     'app.add',
+    'app.edit',
+    'app.delete',
     'app.version'
 ]);
