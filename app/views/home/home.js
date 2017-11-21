@@ -1,6 +1,5 @@
 'use strict';
-
-angular.module('app.home', ['ngRoute'])
+angular.module('app.home', ['ngRoute', 'app.config', 'app.services'])
 
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/Home', {
@@ -8,6 +7,14 @@ angular.module('app.home', ['ngRoute'])
             controller: 'homeController'
         });
     }])
-    .controller('homeController', function ($scope) {
-        $scope.message = 'Home Page';
+    .controller('homeController', function ($scope, config, peopleApi) {
+        getPeople();
+
+        function getPeople() {
+            peopleApi.getPeople().then(function (people) {
+                $scope.people = people.data;
+            }).catch(function (error) {
+                $scope.status = 'Unable to load people data: ' + error.message;
+            });
+        }
     });

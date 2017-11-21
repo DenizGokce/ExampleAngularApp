@@ -1,3 +1,8 @@
-angular.module.exports = {
-    ApiPath: 'https://rest-api-example-go.herokuapp.com/'
-}
+/*angular.module.exports = {
+    ApiEndpoint: 'https://rest-api-example-go.herokuapp.com/'
+}*/
+'use strict';
+
+var app = angular.module('app.config', []).constant('config', {
+    ApiEndpoint: 'http://localhost:5000/'
+});
