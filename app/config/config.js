@@ -4,5 +4,5 @@
 'use strict';
 
 var app = angular.module('app.config', []).constant('config', {
-    ApiEndpoint: 'http://localhost:5000/'
+    ApiEndpoint: 'https://rest-api-example-go.herokuapp.com'
 });
