@@ -6,5 +6,10 @@ peopleService.factory('peopleApi', function ($http, config) {
     peopleApi.getPeople = function () {
         return $http.get(config.ApiEndpoint + '/people');
     }
+
+    peopleApi.addPerson = function (person) {
+        return $http.post(config.ApiEndpoint + '/people/' + person.id, person);
+    }
+
     return peopleApi;
 });

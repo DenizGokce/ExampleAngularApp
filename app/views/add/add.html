@@ -1,3 +1,23 @@
-<div class="row jumbotron">
-    <h2>{{ message }}</h2>
+<h1 class="text-center text-danger">
+    Add Person
+</h1>
+<br/>
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <form>
+            <div class="form-group">
+                <label class="inputEmail">ID</label>
+                <input type="text" ng-model="id" class="form-control input-lg" placeholder="Person ID">
+            </div>
+            <div class="form-group">
+                <label class="inputPassword">First Name</label>
+                <input type="text" ng-model="firstname" class="form-control input-lg" placeholder="Person First Name">
+            </div>
+            <div class="form-group">
+                <label class="inputPassword">Last Name</label>
+                <input type="text" ng-model="lastname" class="form-control input-lg" placeholder="Person Last Name">
+            </div>
+            <button ng-click="addPerson()" class="btn btn-info form-control input-lg">Save</button>
+        </form>
+    </div>
 </div>
