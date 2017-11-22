@@ -1,5 +1,5 @@
 'use strict';
-angular.module('app.home', ['ngRoute', 'app.config', 'app.services'])
+angular.module('app.home', ['ngRoute', 'app.services'])
 
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/Home', {

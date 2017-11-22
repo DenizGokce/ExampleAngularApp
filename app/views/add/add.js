@@ -8,9 +8,7 @@ angular.module('app.add', ['ngRoute', 'app.config', 'app.services'])
             controller: 'addController'
         });
     }])
-    .controller('addController', function ($scope, config, peopleApi) {
-
-
+    .controller('addController', function ($scope, peopleApi) {
         $scope.addPerson = function () {
             var person = {
                 'id': $scope.id,
