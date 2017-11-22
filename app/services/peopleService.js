@@ -16,12 +16,7 @@ peopleService.factory('peopleApi', function ($http, config) {
         return $http.delete(config.ApiEndpoint + '/people/' + id);
     }
     peopleApi.updatePerson = function (person) {
-        var request = $http({
-            method: 'put',
-            url: config.ApiEndpoint + '/people/' + person.id,
-            data: person
-        });
-        return request;
+        return $http.put(config.ApiEndpoint + '/people/' + person.id, person);
     }
     return peopleApi;
 });

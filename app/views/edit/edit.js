@@ -37,8 +37,8 @@ angular.module('app.edit', ['ngRoute', 'app.services'])
                 'firstname': $scope.firstname,
                 'lastname': $scope.lastname
             }
-
             peopleApi.updatePerson(person).then(function (response) {
+                console.log(person, id);
                 alert('Person Updated!');
                 $scope.id = undefined;
                 $scope.firstname = undefined;
