@@ -34,7 +34,7 @@ angular.module('app.delete', ['ngRoute', 'app.services'])
         $scope.DeletePerson = function () {
             var id = $scope.id
             peopleApi.deletePerson(id).then(function (response) {
-                alert('Person Delete!');
+                alert('Person Deleted!');
                 $scope.id = undefined;
                 $scope.firstname = undefined;
                 $scope.lastname = undefined;
