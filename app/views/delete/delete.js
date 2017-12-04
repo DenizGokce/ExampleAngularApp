@@ -9,6 +9,11 @@ angular.module('app.delete', ['ngRoute', 'app.services'])
         });
     }])
     .controller('deleteController', function ($scope, peopleApi) {
+
+        $scope.isActive = function (viewLocation) {
+            var active = (viewLocation === $location.url());
+            return active;
+        };
         $scope.selectedItem = "Select Person";
         $scope.isDeletedItemVisible = false;
 

@@ -8,6 +8,9 @@ angular.module('app.404', ['ngRoute'])
             controller: '404Controller'
         });
     }])
-    .controller('404Controller', [function () {
-
+    .controller('404Controller', [function ($scope) {
+        $scope.isActive = function (viewLocation) {
+            var active = (viewLocation === $location.url());
+            return active;
+        };
     }]);

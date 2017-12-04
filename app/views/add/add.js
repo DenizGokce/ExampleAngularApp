@@ -9,6 +9,10 @@ angular.module('app.add', ['ngRoute', 'app.config', 'app.services'])
         });
     }])
     .controller('addController', function ($scope, peopleApi) {
+        $scope.isActive = function (viewLocation) {
+            var active = (viewLocation === $location.url());
+            return active;
+        };
         $scope.addPerson = function () {
             var person = {
                 'id': $scope.id,

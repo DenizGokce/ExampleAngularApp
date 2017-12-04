@@ -8,6 +8,10 @@ angular.module('app.home', ['ngRoute', 'app.services'])
         });
     }])
     .controller('homeController', function ($scope, config, peopleApi) {
+        $scope.isActive = function (viewLocation) {
+            var active = (viewLocation === $location.url());
+            return active;
+        };
         getPeople();
 
         function getPeople() {
