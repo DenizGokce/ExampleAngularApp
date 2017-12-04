@@ -8,9 +8,9 @@ angular.module('app.delete', ['ngRoute', 'app.services'])
             controller: 'deleteController'
         });
     }])
-    .controller('deleteController', function ($scope, peopleApi) {
+    .controller('deleteController', function ($rootScope, $scope, $location, config, peopleApi) {
 
-        $scope.isActive = function (viewLocation) {
+        $rootScope.isActive = function (viewLocation) {
             var active = (viewLocation === $location.url());
             return active;
         };

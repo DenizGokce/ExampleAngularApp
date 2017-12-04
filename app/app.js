@@ -7,4 +7,9 @@ angular.module('app', [
     'app.services',
     'app.view',
     'app.version'
-]);
+]).controller('mainController', function ($rootScope, $scope, $location) {
+    $rootScope.isActive = function (viewLocation) {
+        var active = (viewLocation === $location.url());
+        return active;
+    };
+});

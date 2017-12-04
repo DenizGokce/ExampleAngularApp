@@ -31,3 +31,7 @@ body {
     content: "|";
     padding-right: 0.3em;
 }
+
+.menu-top {
+    padding-top: 60px !important;
+}

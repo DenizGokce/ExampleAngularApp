@@ -8,8 +8,8 @@ angular.module('app.add', ['ngRoute', 'app.config', 'app.services'])
             controller: 'addController'
         });
     }])
-    .controller('addController', function ($scope, peopleApi) {
-        $scope.isActive = function (viewLocation) {
+    .controller('addController', function ($rootScope, $scope, $location, config, peopleApi) {
+        $rootScope.isActive = function (viewLocation) {
             var active = (viewLocation === $location.url());
             return active;
         };

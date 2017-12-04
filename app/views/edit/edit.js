@@ -8,11 +8,7 @@ angular.module('app.edit', ['ngRoute', 'app.services'])
             controller: 'editController'
         });
     }])
-    .controller('editController', function ($scope, peopleApi) {
-        $scope.isActive = function (viewLocation) {
-            var active = (viewLocation === $location.url());
-            return active;
-        };
+    .controller('editController', function ($rootScope, $scope, $location, config, peopleApi) {
         $scope.selectedItem = "Select Person";
         $scope.isDeletedItemVisible = false;
 
