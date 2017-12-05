@@ -10,7 +10,7 @@ peopleService.factory('peopleApi', function ($http, config) {
         return $http.get(config.ApiEndpoint + '/people/' + id);
     }
     peopleApi.addPerson = function (person) {
-        return $http.post(config.ApiEndpoint + '/people/' + person.id, person);
+        return $http.post(config.ApiEndpoint + '/people', person);
     }
     peopleApi.deletePerson = function (id) {
         return $http.delete(config.ApiEndpoint + '/people/' + id);

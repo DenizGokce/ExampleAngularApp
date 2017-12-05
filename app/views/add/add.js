@@ -15,13 +15,11 @@ angular.module('app.add', ['ngRoute', 'app.config', 'app.services'])
         };
         $scope.addPerson = function () {
             var person = {
-                'id': $scope.id,
                 'firstname': $scope.firstname,
                 'lastname': $scope.lastname
             }
             peopleApi.addPerson(person).then(function (response) {
                 alert('Person Added!');
-                $scope.id = undefined;
                 $scope.firstname = undefined;
                 $scope.lastname = undefined;
             }).catch(function (error) {
