@@ -2,7 +2,11 @@
     <h1 class="text-danger text-center">People</h1>
     <hr/>
     <div class="row">
-        <div class="col-md-9 col-md-offset-1">
+        <!-- Loader Gif -->
+        <div id="loader" class="text-center {{loader}}">
+            <img src="~/../contents/images/loading.gif" height="200" width="200"/>
+        </div>
+        <div class="col-md-9 col-md-offset-1 {{loader_view}}">
             <input type="text" placeholder="Type to filter here" class="input-lg form-control" ng-model="txtFilter">
             <br/>
             <br/>
